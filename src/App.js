@@ -39,7 +39,6 @@ const options = [
 export default () => {
 
     const [selected, setSelected] = useState(options[0]);
-    const [showDropdown, setShowDropdown] = useState(true);
 
     return(
         <div>
@@ -55,13 +54,12 @@ export default () => {
             </Route>
 
             <Route path="/dropdown">
-                {showDropdown ?
                 <Dropdown
                     selected={selected}
                     options={options}
                     onSelectChange={setSelected}
                 />
-                : null }
+
             </Route>
 
             <Route path="/translate">
